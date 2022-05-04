@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>choreonoid_vendor</name>
+  <version>0.0.0</version>
+  <description>vendor package for choreonoid</description>
+  <maintainer email="ms.kataoka@gmail.com">masaya</maintainer>
+  <license>MITn</license>
+
+  <depend>boost</depend>
+  <build_export_depend>eigen</build_export_depend>
+  <build_depend>yaml</build_depend>
+  <exec_depend>yaml</exec_depend>
+  <depend>zlib</depend>
+  <depend>libjpeg</depend>
+  <build_depend>libpng-dev</build_depend>
+  <build_depend>assimp-dev</build_depend>
+  <exec_depend>assimp</exec_depend>
+
+  <build_export_depend>qtbase5-dev</build_export_depend>
+  <build_depend>libqt5-opengl-dev</build_depend>
+  <build_depend>libqt5x11extras5-dev</build_depend>
+  <exec_depend>libqt5-core</exec_depend>
+  <exec_depend>libqt5-gui</exec_depend>
+  <exec_depend>libqt5-widgets</exec_depend>
+  <exec_depend>libqt5-network</exec_depend>
+  <exec_depend>libqt5-opengl</exec_depend>
+  <exec_depend>opengl</exec_depend>
+
+  <!-- Choreonoid depends on Python and numpy if its Python integration is enabled, but the dependency on
+       python packages is omitted in this file because package.xml cannot describe the dependency on
+       different versions of Python for each distribution. In fact up to Melodic uses Python2 and from
+       Noetic uses Python3. -->
+
+  <!-- Packages that Media-plugin depends on -->
+  <build_depend>libpulse-dev</build_depend>
+  <build_depend>libsndfile1-dev</build_depend>
+  <build_depend>libgstreamer1.0-dev</build_depend>
+  <build_depend>libgstreamer-plugins-base1.0-dev</build_depend>
+  <exec_depend>gstreamer1.0</exec_depend>
+  <exec_depend>gstreamer1.0-plugins-base</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
